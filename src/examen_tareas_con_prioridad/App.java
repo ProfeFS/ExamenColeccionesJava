@@ -7,6 +7,8 @@ public class App {
         admin.añadirTarea(new Tarea(1, "Diseñar UI", 5));
         admin.añadirTarea(new Tarea(2, "Implementar backend", 2));
         admin.añadirTarea(new Tarea(3, "Revisar bugs", 1));
+        
+        admin.añadirTarea(new Tarea(1, "Diseñar UI", 5));
        
         admin.mostrarTareaConMayorPrioridad();
         

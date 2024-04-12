@@ -1,5 +1,7 @@
 package examen_tareas_con_prioridad;
 
+import java.util.Objects;
+
 public class Tarea implements Comparable<Tarea> {
 	private int id;
 	private String descripcion;
@@ -44,4 +46,23 @@ public class Tarea implements Comparable<Tarea> {
 		return "ID: " + id + ", Descripción: " + descripcion + ", Observación: " + observacion + ", Prioridad: "
 				+ prioridad;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Tarea other = (Tarea) obj;
+		return id == other.id;
+	}
+	
+	
 }
